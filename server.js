@@ -8,10 +8,10 @@ const errorHandler = require('./middlewares/errorHandler');
 
 const app = express();
 
-// Connect to Database
+
 connectDB();
 
-// Middlewares
+
 app.use(cors());
 app.use(express.json());
 

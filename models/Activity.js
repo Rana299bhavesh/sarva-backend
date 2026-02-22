@@ -9,9 +9,7 @@ const activitySchema = new mongoose.Schema({
   created_at: { type: Date, required: true }
 }, { timestamps: true });
 
-// HIDDEN TWIST SOLUTION: Compound Unique Index
-// This prevents identical records from skewing the analytics.
-// If a record has the same teacher, type, subject, class, and exact creation time, it's a duplicate.
+
 activitySchema.index(
   { teacher_id: 1, activity_type: 1, subject: 1, class: 1, created_at: 1 }, 
   { unique: true }
