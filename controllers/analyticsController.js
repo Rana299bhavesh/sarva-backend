@@ -98,7 +98,7 @@ async function generateGeminiPulse(stats, subjectInsights, teacherId) {
 
   try {
     // We use flash because it is extremely fast for dashboards
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-flash-latest" });
 
     // We build a dynamic prompt based on the actual database numbers
     const topSubjects = subjectInsights.slice(0, 2).map(s => s._id).join(' and ');
